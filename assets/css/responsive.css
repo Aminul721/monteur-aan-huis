@@ -1,0 +1,181 @@
+/* Mobile Menu Core Style*/
+.slicknav_btn { display: block;}
+.slicknav_menu  .slicknav_menutxt { display:inline-block;  }
+.slicknav_menu .slicknav_icon {
+	padding-right:0;
+}
+.slicknav_menu .slicknav_icon:before,
+.slicknav_open .slicknav_arrow:before,
+.slicknav_collapsed .slicknav_arrow:before {
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #1a205c;
+    font-size:18px;
+    position: absolute;
+    top:3px;
+    left:0;
+}
+.slicknav_open .slicknav_arrow:before {
+	content:  "\f107";
+	left:inherit;
+	right:0;
+}
+.slicknav_collapsed .slicknav_arrow:before{ 
+	content: "\f105";
+	left:inherit;
+	right:0;
+}
+.slicknav_open .slicknav_arrow,
+.slicknav_collapsed .slicknav_arrow {
+	position:relative;
+}
+.slicknav_menu .slicknav_icon:before {
+	font-family: "Ionicons";
+	content: "\f394";
+	font-size:30px;
+	right:0;
+	top:8px;
+	left:inherit;
+	color:#fff;
+	/*background:url(../images/menu_bar.png) no-repeat;*/
+	background-position:0 0;
+	width:30px;
+	height:30px;
+	display:block;
+}
+.slicknav_menu .slicknav_open .slicknav_icon:before {content: "\f2d7"; background-position:0 -30px}
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar {}
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {}
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow  { float:right}
+.slicknav_nav .menu-item-has-children > a.slicknav_item { padding-right:0}
+.slicknav_nav .slicknav_item { cursor: pointer; padding: 20px 10px 20px 0; }
+.slicknav_nav .slicknav_row { display: block; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+.slicknav_menu {
+	width:100%;
+	display:none;
+	max-height:400px;
+	overflow:auto;
+}
+.slicknav_btn {
+	position:absolute;
+	right:15px;
+	top:-52px;
+	z-index:2;
+	display:none;
+}
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt {
+	font-size:18px;
+	color:#ff7600;
+	letter-spacing:1px;
+	font-weight:normal;
+	line-height:60px;
+	padding-right:0;
+	text-transform:uppercase;
+	float:left;
+}
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+}
+.slicknav_nav {
+    margin:0;
+    padding: 28px 38px 0 38px;
+	/* background:#fff; */
+}
+.slicknav_nav li {
+	display:block;
+	padding:0;
+	font-weight:400;
+	margin-bottom: 10px;
+}
+.slicknav_nav li:first-child {
+	border:none;
+}
+.slicknav_nav li:last-child { margin-bottom: 0; }
+.slicknav_nav li ul {
+	background-color: #EAF5FF;
+	margin: 0 -38px;
+}
+.slicknav_nav li ul li {
+	font-weight:400;
+	padding: 0 28px;
+	margin: 0;
+	border-top: 1px solid #D9E9F7;
+}
+.slicknav_nav li ul li:first-child {
+	border-top: 1px solid #D9E9F7;
+}
+.slicknav_nav li ul li:last-child { border-bottom: 1px solid #D9E9F7; }
+.slicknav_nav li a {
+	color:#3B5998;
+	font-size:18px;
+	padding:20px 0;
+	font-weight:500;
+}
+.slicknav_nav li ul li a {
+	color: #3B5998;
+	font-size: 13px;
+	line-height: 18px;
+	padding: 13px 10px;
+}
+.slicknav_nav li ul li ul li a { font-size:12px;padding:8px 15px;}
+.slicknav_nav li a:hover,
+.slicknav_nav li.current_page_item > a {
+	color:#1DA1F2;
+}
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+	display: inline-block !important;
+	text-decoration:none !important;
+	padding-bottom:0;
+	padding-top:0;
+}
+/* @media screen and (max-width:1200px ){
+#menu li {
+	margin-right:20px;
+}
+.banner_form h1,
+.banner_info h1 {
+	font-size:36px;
+}
+.header_right .login-btn, .header_right .opvoedhulp-btn { margin-left:10px}
+.footer_area::after { display:none}
+} */
+@media screen and (max-width:991px ){
+.d_b_desktop { display: none !important; }
+.header {
+	padding:15px 0;
+	height:66px;
+}
+#top_menu,
+#menu { display:none}
+.slicknav_menu {
+	display:block;
+}
+#menu_holder .slicknav_nav { display:block !important}
+#menu_holder {
+	display:block;
+}
+.only_desktop_view { display:none !important}
+	.only_mobile_view { display:block !important}
+}
+@media screen and (max-width: 766px ){
+	.only_desktop_view { display:none !important}
+	.only_mobile_view { display:block !important}
+}
